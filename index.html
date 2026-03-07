@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
 *{box-sizing:border-box}
 body{
 margin:0;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
 background:linear-gradient(#eef3ff,#f5f7fb);
 color:var(--text);
 line-height:1.7
@@ -52,7 +52,7 @@ box-shadow:var(--shadow)
 width:100%;aspect-ratio:1/1;border-radius:22px;
 background:linear-gradient(135deg,#dbeafe,#ffffff);
 display:flex;align-items:center;justify-content:center;
-font-size:64px;font-weight:800;color:var(--accent)
+font-size:54px;font-weight:800;color:var(--accent)
 }
 .hero h1{margin:0;font-size:2.4rem}
 .subtitle{color:var(--muted);margin-top:6px}
@@ -94,13 +94,14 @@ font-size:64px;font-weight:800;color:var(--accent)
 </div>
 
 <header class="hero">
-<div class="avatar">蒋</div>
+<div class="avatar">JJ</div>
 <div>
-<h1>Junfeng Jiang（蒋俊锋）</h1>
-<div class="subtitle">河海大学 · 人工智能与自动化学院<br>人机环境智能交互与系统研究所副所长</div>
+<h1>Junfeng Jiang</h1>
+<div class="subtitle">Hohai University · College of Artificial Intelligence and Automation<br>Deputy Director, Institute of Human–Environment Intelligent Interaction and Systems</div>
 <p>
-研究方向包括 <strong>AI医学治疗规划与执行</strong>、<strong>骨科手术机器人</strong>、
-<strong>智能医学影像分析</strong> 与 <strong>三维计算机图形学</strong>。
+Research interests include <strong>AI-based medical treatment planning and execution</strong>,
+<strong>orthopedic surgical robotics</strong>, <strong>medical image analysis</strong>, and
+<strong>3D computer graphics</strong>.
 </p>
 <div class="tags">
 <span class="tag">Orthopedic Surgical Robotics</span>
@@ -124,21 +125,30 @@ font-size:64px;font-weight:800;color:var(--accent)
 <section class="section" id="bio">
 <h2 class="section-title">Biography</h2>
 <p>
-蒋俊锋，工学博士，河海大学人工智能与自动化学院副教授，
-人机环境智能交互与系统研究所副所长。
-全国计算机辅助设计与图形学专委会委员，中国图像图形学会医学影像专委会委员，
-SICOT中国部数字骨科学会江苏省分会委员，江苏省医师协会智慧医疗专委会委员。
+Junfeng Jiang received his Ph.D. in Engineering and is currently an Associate Professor
+at the College of Artificial Intelligence and Automation, Hohai University.
+He serves as the Deputy Director of the Institute of Human–Environment Intelligent
+Interaction and Systems.
 </p>
 <p>
-主持国家自然科学基金、江苏省重点研发计划和江苏省自然科学基金等科研项目，
-科研成果获江苏省医学科技奖。相关算法已应用于脊柱手术机器人及智能术前规划系统。
+He is a committee member of the CAD & Graphics Professional Committee in China,
+a member of the Medical Imaging Committee of the China Society of Image and
+Graphics (CSIG), a member of the Digital Orthopedics Society of SICOT China
+(Jiangsu branch), and a member of the Intelligent Healthcare Committee of the
+Jiangsu Medical Doctor Association.
+</p>
+<p>
+His research focuses on AI-driven medical treatment planning and execution,
+orthopedic surgical robotics, intelligent medical image analysis, and 3D
+computer graphics. His work has been published in leading venues such as
+ICCV, MICCAI, EuroGraphics, Computer-Aided Design, and Computers & Industry.
 </p>
 </section>
 
 <section class="section" id="research">
 <h2 class="section-title">Research Areas</h2>
 <ul>
-<li>AI Medical Planning and Execution</li>
+<li>AI Medical Treatment Planning and Execution</li>
 <li>Orthopedic Surgical Robotics</li>
 <li>Medical Image Analysis</li>
 <li>3D Computer Graphics</li>
@@ -169,21 +179,21 @@ SICOT中国部数字骨科学会江苏省分会委员，江苏省医师协会智
 
 <div class="pub-year">2023</div>
 <div class="pub">
-<div class="pub-title">TAssembly: Fractured Object Assembly</div>
-<div>Computers &amp; Graphics 2023</div>
+<div class="pub-title">TAssembly: Data-driven Fractured Object Assembly</div>
+<div>Computers & Graphics 2023</div>
 </div>
 
 <div class="pub">
-<div class="pub-title">Fracture Bone Segmentation and Reduction</div>
-<div>Computers &amp; Graphics 2023</div>
+<div class="pub-title">Fracture Bone Segmentation and Reduction via Deep Dense Matching</div>
+<div>Computers & Graphics 2023</div>
 </div>
 
 <div class="pub-year">2021</div>
 <div class="pub">
-<div class="pub-title">ARAPReg: An as-rigid-as possible regularization loss for learning deformable shape generators</div>
+<div class="pub-title">ARAPReg: An As-Rigid-As-Possible Regularization Loss for Learning Deformable Shape Generators</div>
 <div>ICCV 2021</div>
 <div class="pub-links">
-<a href="https://arxiv.org/abs/2410.14770">Paper</a>
+<a href="https://arxiv.org/abs/2108.09432">Paper</a>
 <a href="https://github.com/GitBoSun/ARAPReg">Code</a>
 </div>
 </div>
@@ -203,9 +213,9 @@ SICOT中国部数字骨科学会江苏省分会委员，江苏省医师协会智
 <section class="section" id="students">
 <h2 class="section-title">Students & Alumni</h2>
 <ul>
-<li>PhD: Deng Ziyue — Huawei 2012 Lab</li>
-<li>PhD: Shen Ao — Postdoc at Shanghai Jiao Tong University</li>
-<li>Master alumni working at NIO, ByteDance, Meituan, Banks and State Enterprises</li>
+<li>PhD: Ziyue Deng — Huawei 2012 Laboratory</li>
+<li>PhD: Ao Shen — Postdoctoral Researcher at Shanghai Jiao Tong University</li>
+<li>Master graduates employed at NIO, ByteDance, Meituan, banks, and state-owned enterprises</li>
 </ul>
 </section>
 
@@ -221,7 +231,7 @@ SICOT中国部数字骨科学会江苏省分会委员，江苏省医师协会智
 <section class="section" id="service">
 <h2 class="section-title">Academic Service</h2>
 <ul>
-<li>CAD/CG Professional Committee Member</li>
+<li>CAD & Graphics Professional Committee Member</li>
 <li>CSIG Medical Imaging Committee</li>
 <li>SICOT Digital Orthopedics Society</li>
 </ul>
