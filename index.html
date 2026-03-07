@@ -1,41 +1,521 @@
-# Hi, I'm Your Name 👋
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Junfeng Jiang Academic Homepage" />
+  <title>Junfeng Jiang | Academic Homepage</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #667085;
+      --line: #e5e7eb;
+      --accent: #1d4ed8;
+      --accent-2: #2563eb;
+      --soft: #eff6ff;
+      --max-width: 1120px;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --radius: 22px;
+    }
 
-🎓 PhD Student / Researcher at XXX University  
-🔬 Research Interests: Machine Learning, NLP, Computational Biology  
+    * { box-sizing: border-box; }
 
----
+    html { scroll-behavior: smooth; }
 
-## 🧠 Research
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: linear-gradient(180deg, #f8fbff 0%, #f5f7fb 100%);
+      color: var(--text);
+      line-height: 1.75;
+    }
 
-- Paper 1: Title  
-  Conference / Journal (Year)  
-  [Paper] | [Code]
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-- Paper 2: Title  
-  Journal / arXiv (Year)  
-  [Paper] | [Dataset]
+    a:hover { text-decoration: underline; }
 
----
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px 20px 56px;
+    }
 
-## 📂 Projects
+    .nav {
+      position: sticky;
+      top: 14px;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(229, 231, 235, 0.9);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+      border-radius: 999px;
+      padding: 10px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 22px;
+    }
 
-### Project Name
-Short description
+    .nav-left {
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: 0.2px;
+    }
 
-- GitHub: link
-- Demo: link
-- Paper: link
+    .nav-right {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
 
----
+    .nav-right a {
+      color: var(--muted);
+      font-size: 0.96rem;
+      font-weight: 600;
+    }
 
-## 📊 Stats
+    .hero {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 30px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 30px;
+      align-items: center;
+    }
 
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=yourname)
+    .portrait {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 24px;
+      border: 1px solid #dbeafe;
+      background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 55%, #ffffff 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+      font-weight: 800;
+      color: var(--accent);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.6);
+    }
 
----
+    .hero h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      line-height: 1.2;
+      color: #0f172a;
+    }
 
-## 📫 Contact
+    .hero .subtitle {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
 
-Email: your@email.com  
-Google Scholar: link  
-Personal Website: link
+    .hero .intro {
+      margin: 18px 0 0;
+      font-size: 1.03rem;
+      color: #334155;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .chip {
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      font-size: 0.92rem;
+      color: #475569;
+      font-weight: 600;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: #0f172a;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+    }
+
+    .btn.primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.9fr);
+      gap: 22px;
+      margin-top: 22px;
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+
+    .section + .section {
+      margin-top: 22px;
+    }
+
+    .section-title {
+      margin: 0 0 16px;
+      font-size: 1.25rem;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px var(--soft);
+    }
+
+    .bio p,
+    .contact-list,
+    .news-list,
+    .focus-list,
+    .teaching-list {
+      margin: 0;
+      color: #334155;
+    }
+
+    .contact-list,
+    .news-list,
+    .focus-list,
+    .teaching-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .small-card {
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .small-card:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .year-badge {
+      display: inline-block;
+      min-width: 52px;
+      text-align: center;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--accent);
+      font-weight: 800;
+      font-size: 0.85rem;
+      margin-right: 10px;
+    }
+
+    .pub-item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .pub-item:first-child { padding-top: 4px; }
+    .pub-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .pub-title {
+      font-size: 1.05rem;
+      font-weight: 750;
+      color: #0f172a;
+      margin-bottom: 6px;
+    }
+
+    .pub-meta {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .pub-links {
+      margin-top: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .link-tag {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #475569;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 28px;
+      padding: 8px 0 16px;
+    }
+
+    .muted-note {
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 920px) {
+      .hero,
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .portrait {
+        max-width: 220px;
+      }
+
+      .nav {
+        border-radius: 24px;
+        align-items: flex-start;
+        gap: 10px;
+        flex-direction: column;
+      }
+
+      .nav-right {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        padding: 16px 14px 40px;
+      }
+
+      .hero {
+        padding: 20px;
+      }
+
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+
+      .section {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav">
+      <div class="nav-left">Junfeng Jiang</div>
+      <div class="nav-right">
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="portrait">蒋</div>
+      <div>
+        <h1>Junfeng Jiang（蒋俊锋）</h1>
+        <div class="subtitle">河海大学 · 人工智能与自动化学院</div>
+        <p class="intro">
+          主要研究方向包括<strong>骨科手术机器人</strong>、<strong>数字骨科</strong>、<strong>计算机视觉</strong>与<strong>医学影像分析</strong>。
+          研究工作围绕骨科手术场景中的智能感知、术中影像理解、骨折复位与配准建模展开，致力于将人工智能方法应用于数字骨科与计算机辅助手术。
+        </p>
+        <div class="chips">
+          <span class="chip">Orthopedic Surgical Robotics</span>
+          <span class="chip">Digital Orthopedics</span>
+          <span class="chip">Computer Vision</span>
+          <span class="chip">Medical Image Analysis</span>
+        </div>
+        <div class="action-row">
+          <a class="btn primary" href="mailto:jiangjf@hhu.edu.cn">Email</a>
+          <a class="btn" href="#">Google Scholar</a>
+          <a class="btn" href="#">GitHub</a>
+          <a class="btn" href="#">CV</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <main>
+        <section class="section bio" id="about">
+          <h2 class="section-title">About</h2>
+          <p>
+            我是河海大学人工智能与自动化学院研究人员，长期关注骨科手术场景中的计算机视觉与医学影像分析问题。
+            研究重点包括术中 X 线与 CT 的跨模态配准、脊柱与创伤骨科智能辅助分析、骨折碎片重建与计算机辅助复位、
+            以及融合深度学习与几何先验的数字骨科算法设计。
+          </p>
+          <p style="margin-top:12px;">
+            相关成果发表于 <strong>MICCAI</strong>、<strong>ICCV</strong>、<strong>IEEE BIBM</strong>、<strong>Computer Graphics Forum</strong>、
+            <strong>Computers &amp; Graphics</strong> 等国际会议与期刊。欢迎围绕数字骨科、骨科机器人、医学影像计算与跨模态感知等方向开展学术交流与合作。
+          </p>
+        </section>
+
+        <section class="section" id="publications">
+          <h2 class="section-title">Selected Publications</h2>
+
+          <div class="pub-item">
+            <div class="pub-title">A survey on computational solutions for reconstructing complete objects by reassembling their fractured parts</div>
+            <div class="pub-meta">Lu J, Liang Y, Han H, et al. · <em>Computer Graphics Forum</em>, 2025, 44(2): e70081</div>
+            <div class="pub-links">
+              <span class="link-tag">Survey</span>
+              <span class="link-tag">CGF 2025</span>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-title">RadGS-Reg: Registering Spine CT with Biplanar X-Rays via Joint 3D Radiative Gaussians Reconstruction and 3D/3D Registration</div>
+            <div class="pub-meta">Shen A, Fu X, Jiang J, et al. · <em>International Conference on Medical Image Computing and Computer-Assisted Intervention (MICCAI)</em>, 2025: 456-466</div>
+            <div class="pub-links">
+              <span class="link-tag">Spine Registration</span>
+              <span class="link-tag">MICCAI 2025</span>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-title">ARAPReg: An as-rigid-as possible regularization loss for learning deformable shape generators</div>
+            <div class="pub-meta">Huang Q, Huang X, Sun B, et al. · <em>Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)</em>, 2021: 5815-5825</div>
+            <div class="pub-links">
+              <span class="link-tag">Shape Modeling</span>
+              <span class="link-tag">ICCV 2021</span>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-title">TAssembly: Data-driven fractured object assembly using a linear template model</div>
+            <div class="pub-meta">Deng Z, Jiang J*, Chen Z, et al. · <em>Computers &amp; Graphics</em>, 2023, 113: 102-112</div>
+            <div class="pub-links">
+              <span class="link-tag">Fracture Assembly</span>
+              <span class="link-tag">C&amp;G 2023</span>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-title">Synergistically segmenting and reducing fracture bones via whole-to-whole deep dense matching</div>
+            <div class="pub-meta">Deng Z, Jiang J*, Huang R, et al. · <em>Computers &amp; Graphics</em>, 2023, 116: 404-417</div>
+            <div class="pub-links">
+              <span class="link-tag">Fracture Reduction</span>
+              <span class="link-tag">C&amp;G 2023</span>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-title">ABLSpineLevelCheck: Localization of Vertebral Levels on Fluoroscopy via Semi-supervised Abductive Learning</div>
+            <div class="pub-meta">Jiang J*, Shuai L, Zeng Q. · <em>2024 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)</em>, 2024: 3347-3350</div>
+            <div class="pub-links">
+              <span class="link-tag">Fluoroscopy</span>
+              <span class="link-tag">BIBM 2024</span>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-title">对位对线的粗隆间骨折计算机辅助复位方法</div>
+            <div class="pub-meta">邓子越, 蒋俊锋*, 陈正鸣, 等 · <em>计算机辅助设计与图形学学报</em>, 2020, 32(5)</div>
+            <div class="pub-links">
+              <span class="link-tag">骨折复位</span>
+              <span class="link-tag">中文论文</span>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div class="pub-title">基于术中X线片的髓内钉远端孔深度学习定位方法</div>
+            <div class="pub-meta">王菲, 蒋俊锋*, 邓子越, 等 · <em>计算机辅助设计与图形学学报</em>, 2023, 35(8): 1026-1215</div>
+            <div class="pub-links">
+              <span class="link-tag">术中X线</span>
+              <span class="link-tag">深度学习定位</span>
+            </div>
+          </div>
+
+          <p class="muted-note">提示：把每篇论文的 <code>Paper</code>、<code>Code</code>、<code>BibTeX</code> 链接补上后，主页会更完整、更适合对外展示。</p>
+        </section>
+      </main>
+
+      <aside>
+        <section class="section" id="news">
+          <h2 class="section-title">News</h2>
+          <div class="news-list">
+            <div class="small-card"><span class="year-badge">2025</span>论文 <em>RadGS-Reg</em> 被 MICCAI 2025 录用。</div>
+            <div class="small-card"><span class="year-badge">2025</span>综述论文发表于 <em>Computer Graphics Forum</em>。</div>
+            <div class="small-card"><span class="year-badge">2024</span><em>ABLSpineLevelCheck</em> 发表于 IEEE BIBM 2024。</div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Research Focus</h2>
+          <div class="focus-list">
+            <div class="small-card">骨科手术机器人</div>
+            <div class="small-card">数字骨科</div>
+            <div class="small-card">计算机视觉</div>
+            <div class="small-card">医学影像分析</div>
+            <div class="small-card">术中 X 线 / CT 配准</div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Affiliation</h2>
+          <div class="contact-list">
+            <div class="small-card">河海大学</div>
+            <div class="small-card">人工智能与自动化学院</div>
+          </div>
+        </section>
+
+        <section class="section" id="contact">
+          <h2 class="section-title">Contact</h2>
+          <div class="contact-list">
+            <div class="small-card"><strong>Email:</strong> <a href="mailto:jiangjf@hhu.edu.cn">jiangjf@hhu.edu.cn</a></div>
+            <div class="small-card"><strong>Google Scholar:</strong> <a href="#">Coming Soon</a></div>
+            <div class="small-card"><strong>GitHub:</strong> <a href="#">Coming Soon</a></div>
+            <div class="small-card"><strong>CV:</strong> <a href="#">Coming Soon</a></div>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      © 2026 Junfeng Jiang · Powered by GitHub Pages
+    </footer>
+  </div>
+</body>
+</html>
