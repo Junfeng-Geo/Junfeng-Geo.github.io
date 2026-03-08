@@ -6,381 +6,429 @@
 <title>Junfeng Jiang | Academic Homepage</title>
 
 <style>
+
 :root{
-  --bg:#f5f7fb;
-  --card:#ffffff;
-  --text:#1b2430;
-  --muted:#6b7280;
-  --line:#e6eaf0;
-  --accent:#1f57c3;
-  --accent-2:#f59e0b;
-  --soft:#eef4ff;
-  --max:1200px;
-  --radius:22px;
-  --shadow:0 10px 30px rgba(0,0,0,.06);
+--bg:#f5f7fb;
+--card:#ffffff;
+--text:#1b2430;
+--muted:#6b7280;
+--line:#e6eaf0;
+--accent:#1f57c3;
+--highlight:#fff7e6;
+--max:1200px;
+--radius:22px;
+--shadow:0 10px 30px rgba(0,0,0,.06);
 }
 
 *{box-sizing:border-box}
 
 body{
-  margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-  background:linear-gradient(#eef3ff,#f5f7fb);
-  color:var(--text);
-  line-height:1.7;
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+background:linear-gradient(#eef3ff,#f5f7fb);
+color:var(--text);
+line-height:1.7;
 }
 
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 
-.container{max-width:var(--max);margin:auto;padding:24px}
-
-.nav{
-  position:sticky;
-  top:10px;
-  z-index:10;
-  background:rgba(255,255,255,.9);
-  border:1px solid var(--line);
-  backdrop-filter:blur(10px);
-  padding:12px 20px;
-  border-radius:999px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  box-shadow:var(--shadow);
-  margin-bottom:20px;
+.container{
+max-width:var(--max);
+margin:auto;
+padding:24px;
 }
 
-.nav-links{display:flex;gap:14px;flex-wrap:wrap}
+.nav{
+position:sticky;
+top:10px;
+z-index:10;
+background:white;
+border:1px solid var(--line);
+padding:12px 20px;
+border-radius:999px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:var(--shadow);
+margin-bottom:20px;
+}
+
+.nav-links{display:flex;gap:14px}
 
 .hero{
-  background:var(--card);
-  padding:30px;
-  border-radius:28px;
-  border:1px solid var(--line);
-  display:grid;
-  grid-template-columns:240px 1fr;
-  gap:28px;
-  box-shadow:var(--shadow);
+background:var(--card);
+padding:30px;
+border-radius:28px;
+border:1px solid var(--line);
+display:grid;
+grid-template-columns:240px 1fr;
+gap:28px;
+box-shadow:var(--shadow);
 }
 
 .avatar{
-  width:100%;
-  aspect-ratio:1/1;
-  border-radius:22px;
-  object-fit:cover;
-  border:1px solid #e6eaf0;
+width:100%;
+aspect-ratio:1;
+border-radius:20px;
+object-fit:cover;
+border:1px solid var(--line);
 }
 
 .hero h1{margin:0;font-size:2.4rem}
-.subtitle{color:var(--muted);margin-top:6px}
 
-.tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
-.tag{
-  background:#f8fbff;
-  border:1px solid var(--line);
-  padding:6px 10px;
-  border-radius:999px;
-  font-size:.9rem;
+.subtitle{
+color:var(--muted);
+margin-top:6px;
 }
 
-.actions{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+.tags{
+margin-top:14px;
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+}
+
+.tag{
+background:#f8fbff;
+border:1px solid var(--line);
+padding:6px 10px;
+border-radius:999px;
+font-size:.9rem;
+}
+
+.actions{
+margin-top:18px;
+display:flex;
+gap:10px;
+}
+
 .btn{
-  border:1px solid var(--line);
-  padding:8px 14px;
-  border-radius:999px;
-  background:white;
-  font-weight:600;
+border:1px solid var(--line);
+padding:8px 14px;
+border-radius:999px;
+background:white;
+font-weight:600;
 }
 
 .main{
-  display:grid;
-  grid-template-columns:1.6fr .9fr;
-  gap:22px;
-  margin-top:22px;
+display:grid;
+grid-template-columns:1.6fr .9fr;
+gap:22px;
+margin-top:22px;
 }
 
 .section{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  padding:22px;
-  box-shadow:var(--shadow);
+background:var(--card);
+border:1px solid var(--line);
+border-radius:var(--radius);
+padding:22px;
+box-shadow:var(--shadow);
 }
 
-.section-title{margin-top:0;font-size:1.25rem}
+.section-title{
+margin-top:0;
+font-size:1.25rem;
+}
 
-/* publication layout */
+/* publications */
+
 .pub{
-  display:flex;
-  gap:18px;
-  padding:16px 0;
-  border-bottom:1px solid var(--line);
-  align-items:flex-start;
+display:flex;
+gap:18px;
+padding:16px 0;
+border-bottom:1px solid var(--line);
 }
 
 .pub:last-child{border:none}
 
 .pub-img-wrap{
-  flex:0 0 180px;
-  overflow:hidden;
-  border-radius:12px;
-  border:1px solid var(--line);
-  background:#fff;
+width:180px;
+overflow:hidden;
+border-radius:12px;
+border:1px solid var(--line);
 }
 
 .pub-img{
-  width:100%;
-  display:block;
-  transition:transform .35s ease;
+width:100%;
+transition:transform .35s ease;
 }
 
 .pub:hover .pub-img{
-  transform:scale(1.08);
+transform:scale(1.08);
 }
 
 .pub-content{flex:1}
 
 .pub-title{
-  font-weight:600;
-  font-size:1.02rem;
+font-weight:600;
 }
 
 .pub-meta{
-  color:var(--muted);
-  margin-top:4px;
+color:var(--muted);
+margin-top:4px;
 }
 
 .pub-links{
-  margin-top:6px;
-  font-size:.9rem;
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
+margin-top:6px;
+font-size:.9rem;
+display:flex;
+gap:10px;
 }
 
 .pub-year{
-  margin-top:18px;
-  font-weight:700;
-  color:var(--accent);
+margin-top:20px;
+font-weight:700;
+color:var(--accent);
 }
 
-.highlight-badge{
-  display:inline-block;
-  margin-top:8px;
-  margin-right:8px;
-  padding:4px 10px;
-  border-radius:999px;
-  background:#fff7e6;
-  color:#b45309;
-  border:1px solid #f6d28b;
-  font-size:.82rem;
-  font-weight:700;
+.highlight{
+background:var(--highlight);
+border:1px solid #f6d28b;
+padding:4px 10px;
+border-radius:999px;
+font-size:.8rem;
+margin-right:6px;
+display:inline-block;
+margin-top:6px;
 }
-
-.small-list{display:grid;gap:10px}
 
 .footer{
-  text-align:center;
-  margin-top:30px;
-  color:var(--muted);
-  font-size:.9rem;
+text-align:center;
+margin-top:30px;
+color:var(--muted);
+font-size:.9rem;
 }
 
 @media(max-width:900px){
-  .hero,.main{grid-template-columns:1fr}
-  .pub{flex-direction:column}
-  .pub-img-wrap{width:100%;flex:none}
+
+.hero,.main{
+grid-template-columns:1fr
 }
+
+.pub{
+flex-direction:column
+}
+
+.pub-img-wrap{
+width:100%
+}
+
+}
+
 </style>
 </head>
 
 <body>
+
 <div class="container">
 
 <div class="nav">
-  <div><strong>Junfeng Jiang</strong></div>
-  <div class="nav-links">
-    <a href="#bio">Biography</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#projects">Projects</a>
-    <a href="#students">Students</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#service">Service</a>
-    <a href="#contact">Contact</a>
-  </div>
+<strong>Junfeng Jiang</strong>
+<div class="nav-links">
+<a href="#bio">Biography</a>
+<a href="#research">Research</a>
+<a href="#publications">Publications</a>
+<a href="#projects">Projects</a>
+<a href="#teaching">Teaching</a>
+<a href="#contact">Contact</a>
+</div>
 </div>
 
 <header class="hero">
-  <img src="MyPhoto.jpg" class="avatar" alt="Junfeng Jiang">
 
-  <div>
-    <h1>Junfeng Jiang</h1>
-    <div class="subtitle">Hohai University · College of Artificial Intelligence and Automation<br>
-    Deputy Director, Institute of Human–Environment Intelligent Interaction and Systems</div>
+<img src="MyPhoto.jpg" class="avatar">
 
-    <p>
-      Research interests include <strong>AI-based medical treatment planning and execution</strong>,
-      <strong>orthopedic surgical robotics</strong>, <strong>medical image analysis</strong>, and
-      <strong>3D computer graphics</strong>.
-    </p>
+<div>
 
-    <div class="tags">
-      <span class="tag">Orthopedic Surgical Robotics</span>
-      <span class="tag">Digital Orthopedics</span>
-      <span class="tag">Medical Image AI</span>
-      <span class="tag">Computer Vision</span>
-    </div>
+<h1>Junfeng Jiang</h1>
 
-    <div class="actions">
-      <a class="btn" href="mailto:jiangjf@hhu.edu.cn">Email</a>
-      <a class="btn" href="https://github.com/Junfeng-Geo">GitHub</a>
-      <a class="btn" href="#">Google Scholar</a>
-      <a class="btn" href="#">CV</a>
-    </div>
-  </div>
+<div class="subtitle">
+Hohai University · College of Artificial Intelligence and Automation<br>
+Deputy Director, Institute of Human–Environment Intelligent Interaction and Systems
+</div>
+
+<p>
+Research interests include <strong>AI-based medical treatment planning</strong>,
+<strong>orthopedic surgical robotics</strong>, <strong>medical image analysis</strong>,
+and <strong>3D computer graphics</strong>.
+</p>
+
+<div class="tags">
+<span class="tag">Orthopedic Surgical Robotics</span>
+<span class="tag">Medical Image AI</span>
+<span class="tag">Computer Vision</span>
+<span class="tag">Digital Orthopedics</span>
+</div>
+
+<div class="actions">
+<a class="btn" href="mailto:jiangjf@hhu.edu.cn">Email</a>
+<a class="btn" href="https://github.com/Junfeng-Geo">GitHub</a>
+<a class="btn" href="#">Google Scholar</a>
+</div>
+
+</div>
 </header>
 
 <div class="main">
 
 <main>
 
-<section class="section" id="bio">
-  <h2 class="section-title">Biography</h2>
-  <p>
-    Junfeng Jiang is an Associate Professor at the College of Artificial Intelligence
-    and Automation, Hohai University. He serves as the Deputy Director of the
-    Institute of Human–Environment Intelligent Interaction and Systems.
-  </p>
-
-  <p>
-    His research focuses on AI-driven medical treatment planning and execution,
-    orthopedic surgical robotics, medical image analysis, and 3D computer graphics.
-    His work has been published in leading venues including ICCV, MICCAI,
-    EuroGraphics, Computer-Aided Design, and Computers &amp; Industry.
-  </p>
-</section>
-
-<section class="section" id="research">
-  <h2 class="section-title">Research Areas</h2>
-  <ul>
-    <li>AI Medical Treatment Planning and Execution</li>
-    <li>Orthopedic Surgical Robotics</li>
-    <li>Medical Image Analysis</li>
-    <li>3D Computer Graphics</li>
-    <li>Fracture Reconstruction and Reduction</li>
-  </ul>
-</section>
-
 <section class="section" id="publications">
-  <h2 class="section-title">Selected Publications</h2>
 
-  <div class="pub-year">2025</div>
+<h2 class="section-title">Selected Publications</h2>
 
-  <div class="pub">
-    <div class="pub-img-wrap">
-      <img src="radgs-reg.png" class="pub-img" alt="RadGS-Reg teaser image">
-    </div>
-    <div class="pub-content">
-    <div class="pub-title">
-      Shen A, Fu X, <strong>Jiang J</strong>, et al. 
-      <em>RadGS-Reg: Registering Spine CT with Biplanar X-Rays via Joint 3D Radiative Gaussians Reconstruction and 3D/3D Registration</em>
-    </div>
-      <div class="pub-meta">MICCAI 2025</div>
-      <div>
-        <span class="highlight-badge">⭐ Best Paper Nomination</span>
-        <span class="highlight-badge">🏅 Young Scientist Award Nomination</span>
-      </div>
-      <div class="pub-links">
-        <a href="https://arxiv.org/abs/2508.21154">Paper</a>
-        <a href="https://github.com/shenao1995/RadGS_Reg">Code</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="pub">
-    <div class="pub-img-wrap">
-      <img src="reassembly-survey.png" class="pub-img" alt="Reassembly survey image">
-    </div>
-    <div class="pub-content">
-       <div class="pub-title">
-           Lu J, Liang Y, Han H, <strong>Jiang J</strong>, et al.<br>
-           <em>A Survey on Computational Solutions for Reconstructing Complete Objects by Reassembling Their Fractured Parts</em>
-       </div>
-      <div class="pub-meta">Computer Graphics Forum 2025</div>
-      <div class="pub-links">
-        <a href="https://arxiv.org/abs/2410.14770">Paper</a>
-      </div>
-    </div>
-  </div>
-
+<div class="pub-year">2025</div>
 
 <div class="pub">
- <div class="pub-img-wrap">
-      <img src="CT-XrayRegContour.png" class="pub-img" alt="CT-XrayRegContour teaser image">
- </div>
- <div class="pub-content">
 
-  <div class="pub-title">
-  Semantic Edge-Guided Single-View 2D/3D Registration for Vertebrae in X-rays
-  </div>
-
-  <div class="pub-meta">
-  Medical Physics · Accepted (Feb 2025)
-  </div>
-
-  <div class="pub-links">
-  <a href="#">Paper</a>
-  </div>
-
- </div>
+<div class="pub-img-wrap">
+<img src="radgs-reg.png" class="pub-img">
 </div>
 
-
-
-  
-  <div class="pub-year">2024</div>
-
-  <div class="pub">
-    <div class="pub-img-wrap">
-      <img src="ABLSpineLevelCheck.png" class="pub-img" alt="ABLSpineLevelCheck teaser image">
-    </div>
-    <div class="pub-content">
-      <div class="pub-title">ABLSpineLevelCheck: Localization of Vertebral Levels on Fluoroscopy via Semi-supervised Abductive Learning</div>
-      <div class="pub-meta">2024 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)</div>
-    </div>
-  </div>
-
-  <div class="pub-year">2023</div>
-
-  <div class="pub">
-    <div class="pub-img-wrap">
-      <img src="tassembly.png" class="pub-img" alt="TAssembly teaser image">
-    </div>
-    <div class="pub-content">
-      <div class="pub-title">TAssembly: Data-driven Fractured Object Assembly</div>
-      <div class="pub-meta">Computers &amp; Graphics 2023</div>
-    </div>
-  </div>
-
-  <div class="pub">
-    <div class="pub-img-wrap">
-      <img src="synerg.png" class="pub-img" alt="Synergistically segmenting teaser image">
-    </div>
-    <div class="pub-content">
-      <div class="pub-title">Synergistically Segmenting and Reducing Fracture Bones via Whole-to-Whole Deep Dense Matching</div>
-      <div class="pub-meta">Computers &amp; Graphics 2023</div>
-    </div>
-  </div>
-<div class="pub">
-  <div class="pub-img-wrap">
-    <img src="nail-hole.png" class="pub-img" alt="nail-hole">
-  </div>
 <div class="pub-content">
 
 <div class="pub-title">
-A Deep-Learning Approach for Locating the Intramedullary Nail's Holes Based on 2D Calibrated Fluoroscopic Images
+Shen A, Fu X, <strong>Jiang J</strong>, et al.<br>
+<em>RadGS-Reg: Registering Spine CT with Biplanar X-Rays via Joint 3D Radiative Gaussians Reconstruction and 3D/3D Registration</em>
+</div>
+
+<div class="pub-meta">
+MICCAI 2025
+</div>
+
+<div>
+<span class="highlight">Best Paper Nomination</span>
+<span class="highlight">Young Scientist Award Nomination</span>
+</div>
+
+<div class="pub-links">
+<a href="https://arxiv.org/abs/2508.21154">Paper</a>
+<a href="https://github.com/shenao1995/RadGS_Reg">Code</a>
+</div>
+
+</div>
+</div>
+
+<div class="pub">
+
+<div class="pub-img-wrap">
+<img src="CT-XrayRegContour.png" class="pub-img">
+</div>
+
+<div class="pub-content">
+
+<div class="pub-title">
+Shen A, <strong>Jiang J*</strong>, Tang Y, Chen Z, Nong L, Chen Q, Wang F, Wuse X<br>
+<em>Semantic Edge-Guided Single-View 2D/3D Registration for Vertebrae in X-rays</em>
+</div>
+
+<div class="pub-meta">
+Medical Physics · Accepted (Feb 2025)
+</div>
+
+</div>
+</div>
+
+<div class="pub">
+
+<div class="pub-img-wrap">
+<img src="reassembly-survey.png" class="pub-img">
+</div>
+
+<div class="pub-content">
+
+<div class="pub-title">
+Lu J, Liang Y, Han H, <strong>Jiang J</strong>, et al.<br>
+<em>A Survey on Computational Solutions for Reconstructing Complete Objects by Reassembling Their Fractured Parts</em>
+</div>
+
+<div class="pub-meta">
+Computer Graphics Forum · 2025
+</div>
+
+<div class="pub-links">
+<a href="https://arxiv.org/abs/2410.14770">Paper</a>
+</div>
+
+</div>
+</div>
+
+<div class="pub-year">2024</div>
+
+<div class="pub">
+
+<div class="pub-img-wrap">
+<img src="ABLSpineLevelCheck.png" class="pub-img">
+</div>
+
+<div class="pub-content">
+
+<div class="pub-title">
+<strong>Jiang J*</strong>, Shuai L, Zeng Q<br>
+<em>ABLSpineLevelCheck: Localization of Vertebral Levels on Fluoroscopy via Semi-supervised Abductive Learning</em>
+</div>
+
+<div class="pub-meta">
+IEEE BIBM 2024
+</div>
+
+</div>
+</div>
+
+<div class="pub-year">2023</div>
+
+<div class="pub">
+
+<div class="pub-img-wrap">
+<img src="tassembly.png" class="pub-img">
+</div>
+
+<div class="pub-content">
+
+<div class="pub-title">
+Deng Z, <strong>Jiang J*</strong>, Chen Z, et al.<br>
+<em>TAssembly: Data-driven Fractured Object Assembly</em>
+</div>
+
+<div class="pub-meta">
+Computers & Graphics · 2023
+</div>
+
+</div>
+</div>
+
+<div class="pub">
+
+<div class="pub-img-wrap">
+<img src="synerg.png" class="pub-img">
+</div>
+
+<div class="pub-content">
+
+<div class="pub-title">
+Deng Z, <strong>Jiang J*</strong>, Huang R, et al.<br>
+<em>Synergistically Segmenting and Reducing Fracture Bones via Whole-to-Whole Deep Dense Matching</em>
+</div>
+
+<div class="pub-meta">
+Computers & Graphics · 2023
+</div>
+
+</div>
+</div>
+
+<div class="pub">
+
+<div class="pub-img-wrap">
+<img src="nail-hole.png" class="pub-img">
+</div>
+
+<div class="pub-content">
+
+<div class="pub-title">
+Wang F, <strong>Jiang J*</strong>, Deng Z, et al.<br>
+<em>A Deep-Learning Approach for Locating the Intramedullary Nail's Holes Based on 2D Calibrated Fluoroscopic Images</em>
 </div>
 
 <div class="pub-meta">
@@ -390,124 +438,37 @@ Journal of Mechanics in Medicine and Biology · 2023
 </div>
 </div>
 
+<div class="pub-year">2021</div>
 
+<div class="pub">
 
-  
-  <div class="pub-year">2021</div>
+<div class="pub-img-wrap">
+<img src="arap.png" class="pub-img">
+</div>
 
-  <div class="pub">
-    <div class="pub-img-wrap">
-      <img src="arap.png" class="pub-img" alt="ARAPReg teaser image">
-    </div>
-    <div class="pub-content">
-      <div class="pub-title">ARAPReg: An As-Rigid-As-Possible Regularization Loss for Learning Deformable Shape Generators</div>
-      <div class="pub-meta">ICCV 2021</div>
-      <div class="pub-links">
-        <a href="https://arxiv.org/abs/2108.09432">Paper</a>
-        <a href="https://github.com/GitBoSun/ARAPReg">Code</a>
-      </div>
-    </div>
-  </div>
+<div class="pub-content">
 
-</section>
+<div class="pub-title">
+Huang Q, Huang X, Sun B, <strong>Jiang J</strong>, et al.<br>
+<em>ARAPReg: An As-Rigid-As-Possible Regularization Loss for Learning Deformable Shape Generators</em>
+</div>
 
-<section class="section" id="projects">
+<div class="pub-meta">
+ICCV 2021
+</div>
 
-<h2 class="section-title">Research Projects & Grants</h2>
+<div class="pub-links">
+<a href="https://arxiv.org/abs/2108.09432">Paper</a>
+<a href="https://github.com/GitBoSun/ARAPReg">Code</a>
+</div>
 
-<h3>Ongoing Projects</h3>
+</div>
+</div>
 
-<ul>
+<p style="font-size:0.9rem;color:#666">
+* Corresponding author
+</p>
 
-<li>
-<strong>Key Technologies for an Intelligent Dual-Channel Spinal Endoscopic Surgical Robot</strong><br>
-Tuodao Medical Technology Co., Ltd.<br>
-Jan 2026 – Dec 2028 · 3,000,000 RMB · <strong>PI</strong>
-</li>
-
-<li>
-<strong>Key Technologies of Mixed-Reality Based Intelligent Navigation System for Trauma Orthopedics</strong> (BE2022718)<br>
-Jiangsu Provincial Science and Technology Program (Clinical Frontier Technology)<br>
-Jul 2022 – Jun 2025 · 2,000,000 RMB · <strong>Project Leader</strong>
-</li>
-
-<li>
-<strong>2D/3D Registration Algorithms for Image-Guided Spinal Surgical Robots</strong><br>
-Industry Collaborative Project<br>
-Apr 2024 – Aug 2026 · 350,000 RMB · <strong>PI</strong>
-</li>
-
-<li>
-<strong>3D Surgical Planning and Simulation System for Fracture Bridging Fixation</strong><br>
-Daozhiyong Co., Ltd.<br>
-Sep 2025 – Jan 2026 · 150,000 RMB · <strong>PI</strong>
-</li>
-
-<li>
-<strong>Spinal Vertebra Sub-component and Soft Tissue Segmentation Algorithms</strong><br>
-Tuodao Medical Technology<br>
-Aug 2025 – Jul 2026 · 100,000 RMB · <strong>PI</strong>
-</li>
-
-</ul>
-
-<h3>Completed Projects</h3>
-
-<ul>
-
-<li>
-<strong>Efficient Processing of 3D Models for Fracture Repair Surgical Planning</strong> (61772172)<br>
-National Natural Science Foundation of China<br>
-Jan 2018 – Dec 2021 · 610,000 RMB · <strong>Participant</strong>
-</li>
-
-<li>
-<strong>Key Technologies for Computer-Assisted Preoperative Planning for Fracture Treatment</strong> (BK20181158)<br>
-Jiangsu Natural Science Foundation<br>
-Jul 2018 – Jun 2021 · 100,000 RMB · <strong>PI</strong>
-</li>
-
-<li>
-<strong>AR-based 3D Spatial Localization for Distal Femoral Intramedullary Nail Locking Holes</strong><br>
-Industry Project (CZ821015616)<br>
-Feb 2021 – Jul 2022 · <strong>PI</strong>
-</li>
-
-<li>
-<strong>Intelligent 3D Reconstruction and Measurement for Knee Replacement Surgery</strong><br>
-Industry Project<br>
-Nov 2021 – Oct 2022 · <strong>PI</strong>
-</li>
-
-</ul>
-
-</section>
-
-
-<section class="section" id="students">
-  <h2 class="section-title">Students &amp; Alumni</h2>
-  <ul>
-    <li>PhD: Ziyue Deng — Huawei 2012 Laboratory</li>
-    <li>PhD: Ao Shen — Postdoctoral Researcher at Shanghai Jiao Tong University</li>
-    <li>Master graduates employed at NIO, ByteDance, Meituan and others</li>
-  </ul>
-</section>
-
-<section class="section" id="teaching">
-  <h2 class="section-title">Teaching</h2>
-  <ul>
-    <li><strong>Machine Learning</strong> — Fall Semester</li>
-    <li><strong>AI Medical Image Analysis and Applications</strong> — Spring Semester</li>
-  </ul>
-</section>
-
-<section class="section" id="service">
-  <h2 class="section-title">Academic Service</h2>
-  <ul>
-    <li>CAD &amp; Graphics Professional Committee Member</li>
-    <li>CSIG Medical Imaging Committee</li>
-    <li>SICOT Digital Orthopedics Society</li>
-  </ul>
 </section>
 
 </main>
@@ -515,22 +476,10 @@ Nov 2021 – Oct 2022 · <strong>PI</strong>
 <aside>
 
 <section class="section">
-  <h2 class="section-title">News</h2>
-  <div class="small-list">
-    <div>2026 — Joint project on spinal endoscopic surgical robots</div>
-    <div>2025 — MICCAI Best Paper Nomination and Young Scientist Award Nomination</div>
-    <div>2023 — Jiangsu Medical Science Award</div>
-  </div>
-</section>
-
-<section class="section" id="contact">
-  <h2 class="section-title">Contact</h2>
-  <div class="small-list">
-    <div>Email: jiangjf@hhu.edu.cn</div>
-    <div>GitHub: github.com/Junfeng-Geo</div>
-    <div>Affiliation: Hohai University</div>
-    <div>Location: Jiangsu, China</div>
-  </div>
+<h2 class="section-title">Contact</h2>
+<p>Email: jiangjf@hhu.edu.cn</p>
+<p>GitHub: github.com/Junfeng-Geo</p>
+<p>Hohai University</p>
 </section>
 
 </aside>
@@ -538,9 +487,10 @@ Nov 2021 – Oct 2022 · <strong>PI</strong>
 </div>
 
 <div class="footer">
-  © 2026 Junfeng Jiang · Academic Homepage · Hosted by GitHub Pages
+© 2026 Junfeng Jiang · Hosted by GitHub Pages
 </div>
 
 </div>
+
 </body>
 </html>
