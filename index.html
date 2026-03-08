@@ -329,6 +329,50 @@
       font-size: .9rem;
     }
 
+    .abstract-box {
+      margin-top: 10px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fafcff;
+      overflow: hidden;
+    }
+
+    .abstract-box summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 10px 14px;
+      font-size: .92rem;
+      font-weight: 600;
+      color: var(--accent-dark);
+      user-select: none;
+    }
+
+    .abstract-box summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .abstract-box summary::after {
+      content: "+";
+      float: right;
+      font-size: 1rem;
+    }
+
+    .abstract-box[open] summary::after {
+      content: "−";
+    }
+
+    .abstract-text {
+      padding: 0 14px 14px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .scholar-link {
+      margin-top: 12px;
+      display: inline-block;
+      font-size: .92rem;
+    }
+
     .footer {
       text-align: center;
       margin-top: 30px;
@@ -383,7 +427,7 @@
       <img src="MyPhoto.jpg" class="avatar" alt="Junfeng Jiang" />
 
       <div>
-        <h1>Junfeng Jiang (蒋俊锋)</h1>
+        <h1>Junfeng Jiang</h1>
         <div class="subtitle">
           Hohai University · College of Artificial Intelligence and Automation<br />
           Deputy Director, Institute of Human–Environment Intelligent Interaction and Systems
@@ -450,7 +494,7 @@
             </div>
             <div class="pub-content">
               <div class="pub-title">
-                Shen A, Fu X, <strong>Jiang J*</strong>, et al.<br />
+                Shen A, Fu X, <strong>Jiang J</strong>, et al.<br />
                 <em>RadGS-Reg: Registering Spine CT with Biplanar X-Rays via Joint 3D Radiative Gaussians Reconstruction and 3D/3D Registration</em>
               </div>
               <div class="pub-meta">MICCAI 2025</div>
@@ -462,6 +506,10 @@
                 <a href="https://arxiv.org/abs/2508.21154">Paper</a>
                 <a href="https://github.com/shenao1995/RadGS_Reg">Code</a>
               </div>
+              <details class="abstract-box">
+                <summary>Abstract</summary>
+                <div class="abstract-text">A framework for spine CT and biplanar X-ray registration that combines 3D radiative Gaussian reconstruction with 3D/3D registration to improve alignment accuracy in image-guided spinal intervention scenarios.</div>
+              </details>
             </div>
           </div>
 
@@ -475,6 +523,10 @@
                 <em>Semantic Edge-Guided Single-View 2D/3D Registration for Vertebrae in X-rays</em>
               </div>
               <div class="pub-meta">Medical Physics · Accepted (Feb 2025)</div>
+              <details class="abstract-box">
+                <summary>Abstract</summary>
+                <div class="abstract-text">A single-view 2D/3D vertebra registration method guided by semantic edge information, designed to improve robustness and geometric consistency in X-ray based spinal alignment tasks.</div>
+              </details>
             </div>
           </div>
 
@@ -484,35 +536,19 @@
             </div>
             <div class="pub-content">
               <div class="pub-title">
-                Lu J, Liang Y, Han H, <strong>Jiang J*</strong>, et al.<br />
+                Lu J, Liang Y, Han H, <strong>Jiang J</strong>, et al.<br />
                 <em>A Survey on Computational Solutions for Reconstructing Complete Objects by Reassembling Their Fractured Parts</em>
               </div>
               <div class="pub-meta">Computer Graphics Forum · 2025</div>
               <div class="pub-links">
                 <a href="https://arxiv.org/abs/2410.14770">Paper</a>
               </div>
+              <details class="abstract-box">
+                <summary>Abstract</summary>
+                <div class="abstract-text">A survey of computational methods for reconstructing complete objects from fractured parts, covering geometric matching, learning-based assembly, optimization strategies, datasets, and evaluation protocols.</div>
+              </details>
             </div>
           </div>
-
-          <div class="pub">
-
-           <div class="pub-img-wrap">
-              <img src="super-res-mri.png" class="pub-img" alt="Spinal MRI Super Resolution image-1">
-           </div>
-
-           <div class="pub-content">
-
-           <div class="pub-title">
-             Wang Z, <strong>Jiang J*</strong>, Chen Z, et al.<br>
-            <em>Spinal Magnetic Resonance Imaging Super-Resolution Based on Improved Latent Diffusion Models</em>
-           </div>
-           <div class="pub-meta">
-              2025 2nd International Conference on Image, Signal Processing and Communication Technology (ISPCT), IEEE · 2025
-           </div>
-
-           </div>
-        </div>
-          
 
           <div class="pub-year">2024</div>
 
@@ -526,6 +562,10 @@
                 <em>ABLSpineLevelCheck: Localization of Vertebral Levels on Fluoroscopy via Semi-supervised Abductive Learning</em>
               </div>
               <div class="pub-meta">IEEE BIBM 2024</div>
+              <details class="abstract-box">
+                <summary>Abstract</summary>
+                <div class="abstract-text">A semi-supervised abductive learning framework for localizing vertebral levels on fluoroscopic images, targeting more reliable intraoperative level identification in spinal procedures.</div>
+              </details>
             </div>
           </div>
 
@@ -541,6 +581,14 @@
                 <em>TAssembly: Data-driven Fractured Object Assembly</em>
               </div>
               <div class="pub-meta">Computers &amp; Graphics · 2023</div>
+              <details class="abstract-box">
+                <summary>Abstract</summary>
+                <div class="abstract-text">A whole-to-whole deep dense matching approach that jointly performs fracture bone segmentation and reduction to support intelligent orthopedic reconstruction.</div>
+              </details>
+              <details class="abstract-box">
+                <summary>Abstract</summary>
+                <div class="abstract-text">A data-driven framework for fractured object assembly using a linear template model to guide fragment alignment and reconstruction.</div>
+              </details>
             </div>
           </div>
 
@@ -567,6 +615,10 @@
                 <em>A Deep-Learning Approach for Locating the Intramedullary Nail's Holes Based on 2D Calibrated Fluoroscopic Images</em>
               </div>
               <div class="pub-meta">Journal of Mechanics in Medicine and Biology · 2023</div>
+              <details class="abstract-box">
+                <summary>Abstract</summary>
+                <div class="abstract-text">A deep-learning method for localizing intramedullary nail holes from calibrated fluoroscopic images, aiming to improve efficiency and accuracy in orthopedic fixation procedures.</div>
+              </details>
             </div>
           </div>
 
@@ -586,6 +638,10 @@
                 <a href="https://arxiv.org/abs/2108.09432">Paper</a>
                 <a href="https://github.com/GitBoSun/ARAPReg">Code</a>
               </div>
+              <details class="abstract-box">
+                <summary>Abstract</summary>
+                <div class="abstract-text">An as-rigid-as-possible regularization loss for learning deformable shape generators, encouraging plausible deformation behavior while preserving local geometric structure.</div>
+              </details>
             </div>
           </div>
 
@@ -665,7 +721,7 @@
           <h2 class="section-title">Students &amp; Alumni</h2>
           <ul class="info-list">
             <li>PhD: Ziyue Deng — Huawei 2012 Laboratory</li>
-            <li>PhD:<a href="https://shenao1995.github.io/homepage/"> Ao Shen</a> — Postdoctoral Researcher at Shanghai Jiao Tong University</li>
+            <li>PhD: <a href="https://shenao1995.github.io/homepage/">Ao Shen</a> — Postdoctoral Researcher at Shanghai Jiao Tong University</li>
             <li>Master graduates employed at NIO, ByteDance, Meituan, banks, and state-owned enterprises</li>
           </ul>
         </section>
@@ -708,8 +764,9 @@
             </div>
           </div>
           <div class="note">
-            Add your Google Scholar profile link or profile ID here to enable live citation statistics.
+            Auto-updating Google Scholar statistics require your Google Scholar profile URL or user ID. Replace the placeholders after adding your profile identifier.
           </div>
+          <a class="scholar-link" href="#">Add Google Scholar profile link</a>
         </section>
 
         <section class="section">
