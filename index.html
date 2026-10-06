@@ -653,6 +653,19 @@
         transition-duration: .01ms !important;
       }
     }
+  
+/* Research figures: full scientific panels, no crop */
+.research-visual{margin:20px 0 22px;background:#fff;border:1px solid #dce6f3;border-radius:18px;overflow:hidden;box-shadow:0 12px 30px rgba(20,45,80,.07)}
+.research-visual>a{display:block;padding:12px;background:#fff}
+.research-visual img{width:100%;height:auto;display:block;object-fit:contain}
+.research-visual figcaption{padding:10px 15px;border-top:1px solid #edf1f7;color:#64748b;font-size:.8rem;background:#f8fbff}
+.visual-paper{display:block!important;padding:24px 0}
+.featured-thumb{display:block;width:100%;height:130px;object-fit:contain;background:#fff;border-radius:10px;margin:0 0 14px;border:1px solid #e5ecf6}
+.featured-card:focus-visible{outline:3px solid #2159c8;outline-offset:4px}
+.featured-card:hover{text-decoration:none}
+#flowreg,#radgs-reg-plus,#semantic-edge,#radgs-reg-2025,#xbone-studio{scroll-margin-top:150px}
+@media(max-width:600px){.research-visual>a{padding:6px}.featured-thumb{height:170px}.hero{padding:24px}.section{padding:20px}}
+
   </style>
 </head>
 <body>
@@ -766,17 +779,17 @@
               <h3>XBone Studio</h3>
               <p>An integrated CT/MR workstation for visualization, segmentation, reconstruction, and registration.</p>
             </a>
-            <a class="featured-card" href="#radgs-reg-plus">
+            <a class="featured-card" href="#radgs-reg-plus"><img class="featured-thumb" src="assets/radgs-reg-plus-framework.jpg" alt="RadGS-Reg+ framework" loading="lazy">
               <div class="eyebrow">Medical image analysis · 2026</div>
               <h3>RadGS-Reg+</h3>
               <p>Teacher–student radiative Gaussian reconstruction and 3D/3D registration for lumbar CT/X-ray registration.</p>
             </a>
-            <a class="featured-card" href="#flowreg">
+            <a class="featured-card" href="#flowreg"><img class="featured-thumb" src="assets/flowreg-framework.jpg" alt="FlowReg framework" loading="lazy">
               <div class="eyebrow">MICCAI · 2026 · Published</div>
               <h3>FlowReg</h3>
               <p>Reconstruction-guided flow matching for universal spinal CT/X-ray registration.</p>
             </a>
-            <a class="featured-card" href="#radgs-reg-2025">
+            <a class="featured-card" href="#radgs-reg-2025"><img class="featured-thumb" src="radgs-reg.png" alt="RadGS-Reg framework" loading="lazy">
               <div class="eyebrow">MICCAI · 2025</div>
               <h3>RadGS-Reg</h3>
               <p>Joint 3D radiative Gaussian reconstruction and registration for spine CT with biplanar X-rays.</p>
@@ -813,7 +826,7 @@
               </p>
             </div>
           </article>
-            <div class="pub" id="flowreg">
+            <div class="pub visual-paper" id="flowreg"><figure class="research-visual"><a href="assets/flowreg-framework.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open full-resolution figure"><img src="assets/flowreg-framework.jpg" alt="FlowReg training pipeline combining biplanar image features, volume reconstruction and flow-based pose prediction" loading="lazy" decoding="async"></a><figcaption>FlowReg, Fig. 2(a). Shen et al., MICCAI 2026. · <a href="https://doi.org/10.1007/978-3-032-38186-6_8">Original publication</a> · Click image to enlarge</figcaption></figure>
             <div class="pub-content">
               <div class="pub-title">
                 Ao Shen, <strong>Junfeng Jiang*</strong>, Xueming Fu, Qiang Zeng, Ye Tang, Zhengming Chen, Luming Nong, Feng Wang, Shaohua Kevin Zhou*<br />
@@ -830,7 +843,7 @@
             </div>
           </div>
 
-          <div class="pub" id="radgs-reg-plus">
+          <div class="pub visual-paper" id="radgs-reg-plus"><figure class="research-visual"><a href="assets/radgs-reg-plus-framework.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open full-resolution figure"><img src="assets/radgs-reg-plus-framework.jpg" alt="RadGS-Reg+ teacher pretraining and teacher-student reconstruction framework" loading="lazy" decoding="async"></a><figcaption>RadGS-Reg+, Fig. 3. Jiang, Shen et al., Medical Image Analysis. Online 2026. · <a href="https://doi.org/10.1016/j.media.2026.104319">Original publication</a> · Click image to enlarge</figcaption></figure>
             <div class="pub-content">
               <div class="pub-title">
                 <em>RadGS-Reg+: Teacher-Student Radiative Gaussian Reconstruction and 3D/3D Registration for Lumbar CT/X-ray Registration</em>
@@ -846,10 +859,7 @@
             </div>
           </div>
 
-            <div class="pub">
-            <div class="pub-img-wrap">
-              <img src="CT-XrayRegContour.png" class="pub-img" alt="Semantic Edge-Guided registration image" />
-            </div>
+            <div class="pub visual-paper" id="semantic-edge"><figure class="research-visual"><a href="assets/semantic-edge-framework.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open full-resolution figure"><img src="assets/semantic-edge-framework.jpg" alt="Semantic edge-guided registration: ESegMamba training, preprocessing and 2D/3D registration" loading="lazy" decoding="async"></a><figcaption>Semantic edge-guided registration, Fig. 3. Shen et al., Medical Physics 53, e70385 (2026). · <a href="https://doi.org/10.1002/mp.70385">Original publication</a> · Click image to enlarge</figcaption></figure>
             <div class="pub-content">
               <div class="pub-title">
                 Shen A, <strong>Jiang J*</strong>, Tang Y, Chen Z, Nong L, Chen Q, Wang F, Wuse X<br />
